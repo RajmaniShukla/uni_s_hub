@@ -11,6 +11,7 @@ import StudentsParents from '@/components/StudentsParents'
 import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import AdPopup from '@/components/AdPopup'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <CTASection />
       <Footer />
       <WhatsAppButton />
+      <AdPopup />
     </main>
   )
 }

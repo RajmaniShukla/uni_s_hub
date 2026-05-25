@@ -61,9 +61,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors`}>
-        <a href="#main-content" className="skip-to-content">
-          Skip to content
-        </a>
+        <a href="#main-content" className="skip-to-content">Skip to content</a>
         <AuthProvider>
           <div id="main-content">
             {children}

@@ -124,57 +124,62 @@ export default function Hero() {
           </div>
 
           {/* ── CURRICULUM SELECTOR ── */}
-          <div className="mt-10 mb-8">
-            <p className="text-center text-slate-400 text-sm font-medium uppercase tracking-widest mb-5">
+          <div className="mt-8 mb-8">
+            <p className="text-center text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-widest mb-4">
               What are you studying?
             </p>
 
-            {/* Curriculum pill tabs */}
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {curricula.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => setSelected(c.id)}
-                  className={`relative px-5 py-2.5 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 border
-                    ${selected === c.id
-                      ? `bg-gradient-to-r ${c.color} text-white border-transparent shadow-lg ${c.glow} scale-105`
-                      : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white hover:scale-105'
-                    }`}
-                >
-                  <span className="mr-1.5">{c.icon}</span>
-                  {c.label}
-                  {selected === c.id && (
-                    <span className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-green-400 rounded-full border-2 border-slate-900" />
-                  )}
-                </button>
-              ))}
+            {/* Scrollable pill tabs on mobile, wrap on larger */}
+            <div className="overflow-x-auto tab-scroll pb-2 mb-6">
+              <div className="flex gap-2 sm:gap-3 w-max sm:w-auto sm:flex-wrap sm:justify-center mx-auto px-2">
+                {curricula.map((c) => (
+                  <button
+                    key={c.id}
+                    onClick={() => setSelected(c.id)}
+                    className={`relative flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-sm transition-all duration-300 border
+                      ${selected === c.id
+                        ? `bg-gradient-to-r ${c.color} text-white border-transparent shadow-lg ${c.glow} scale-105`
+                        : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white'
+                      }`}
+                  >
+                    <span className="mr-1">{c.icon}</span>
+                    {c.label}
+                    {selected === c.id && (
+                      <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-400 rounded-full border-2 border-slate-900" />
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Active curriculum card */}
-            <div className={`max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border ${active.border} rounded-2xl p-5 sm:p-6 transition-all duration-300`}>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${active.color} flex items-center justify-center text-2xl flex-shrink-0 shadow-lg`}>
-                  {active.icon}
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-1">
-                    <h3 className="text-white font-bold text-xl">{active.fullName}</h3>
-                    <span className="text-xs px-2 py-0.5 bg-white/10 text-slate-300 rounded-full">{active.description}</span>
+            <div className={`max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border ${active.border} rounded-2xl p-4 sm:p-6 transition-all duration-300`}>
+              <div className="flex flex-col gap-4">
+                {/* Top row: icon + name + badge */}
+                <div className="flex items-start gap-3">
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${active.color} flex items-center justify-center text-xl sm:text-2xl flex-shrink-0 shadow-lg`}>
+                    {active.icon}
                   </div>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {active.subjects.map((sub) => (
-                      <span key={sub} className="flex items-center gap-1 text-xs text-slate-300 bg-white/5 px-2.5 py-1 rounded-lg border border-white/10">
-                        <BookOpen className="w-3 h-3 text-primary-400" />
-                        {sub}
-                      </span>
-                    ))}
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-white font-bold text-lg sm:text-xl leading-tight">{active.fullName}</h3>
+                    <span className="text-xs px-2 py-0.5 bg-white/10 text-slate-300 rounded-full mt-1 inline-block">{active.description}</span>
                   </div>
                 </div>
+                {/* Subjects */}
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                  {active.subjects.map((sub) => (
+                    <span key={sub} className="flex items-center gap-1 text-xs text-slate-300 bg-white/5 px-2 sm:px-2.5 py-1 rounded-lg border border-white/10">
+                      <BookOpen className="w-3 h-3 text-primary-400 flex-shrink-0" />
+                      {sub}
+                    </span>
+                  ))}
+                </div>
+                {/* CTA */}
                 <a
                   href="/auth/signup"
-                  className={`flex-shrink-0 flex items-center gap-2 bg-gradient-to-r ${active.color} text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg hover:scale-105 transition-transform`}
+                  className={`w-full sm:w-auto sm:self-start flex items-center justify-center gap-2 bg-gradient-to-r ${active.color} text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg hover:scale-105 transition-transform`}
                 >
-                  Find a Tutor <ChevronRight className="w-4 h-4" />
+                  Find a {active.label} Tutor <ChevronRight className="w-4 h-4" />
                 </a>
               </div>
             </div>

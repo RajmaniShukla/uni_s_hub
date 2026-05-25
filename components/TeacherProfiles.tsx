@@ -108,11 +108,11 @@ export default function TeacherProfiles() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="flex gap-5 overflow-x-auto tab-scroll pb-4 snap-x snap-mandatory">
           {teachers.map((teacher) => (
             <div
               key={teacher.id}
-              className="bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100 dark:border-slate-700 group flex flex-col"
+              className="flex-shrink-0 w-72 sm:w-80 snap-start bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100 dark:border-slate-700 group flex flex-col"
             >
               {/* Header */}
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 dark:from-primary-700 dark:to-primary-800 p-6 text-white text-center">

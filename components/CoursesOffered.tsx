@@ -144,38 +144,40 @@ export default function CoursesOffered() {
           </p>
         </div>
 
-        {/* Curriculum tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {curricula.map(c => (
-            <button
-              key={c.id}
-              onClick={() => setActive(c.id)}
-              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 border
-                ${active === c.id
-                  ? `bg-gradient-to-r ${c.color} text-white border-transparent shadow-lg scale-105`
-                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600 hover:scale-105'
-                }`}
-            >
-              {c.icon} {c.label}
-            </button>
-          ))}
+        {/* Curriculum tabs — scrollable on mobile */}
+        <div className="overflow-x-auto tab-scroll pb-2 mb-6">
+          <div className="flex gap-2 sm:gap-3 w-max sm:w-auto sm:flex-wrap sm:justify-center mx-auto px-1">
+            {curricula.map(c => (
+              <button
+                key={c.id}
+                onClick={() => setActive(c.id)}
+                className={`flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold text-sm transition-all duration-300 border
+                  ${active === c.id
+                    ? `bg-gradient-to-r ${c.color} text-white border-transparent shadow-lg scale-105`
+                    : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-600'
+                  }`}
+              >
+                {c.icon} {c.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Active curriculum panel */}
         <div className={`max-w-5xl mx-auto ${cur.lightBg} border ${cur.border} rounded-2xl overflow-hidden shadow-xl mb-12`}>
           {/* Header */}
-          <div className={`bg-gradient-to-r ${cur.color} p-6 sm:p-8 text-white`}>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-3 mb-1">
-                  <span className="text-3xl">{cur.icon}</span>
-                  <h3 className="text-2xl sm:text-3xl font-bold">{cur.fullName}</h3>
+          <div className={`bg-gradient-to-r ${cur.color} p-5 sm:p-8 text-white`}>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl sm:text-3xl">{cur.icon}</span>
+                <div>
+                  <h3 className="text-xl sm:text-3xl font-bold">{cur.fullName}</h3>
+                  <p className="text-white/70 text-xs sm:text-sm mt-0.5">{cur.level} · {cur.students.toLocaleString()} students enrolled</p>
                 </div>
-                <p className="text-white/70 text-sm">{cur.level} · {cur.students.toLocaleString()} students enrolled</p>
               </div>
               <a
                 href="/auth/signup"
-                className="flex-shrink-0 flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white border border-white/30 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all"
+                className="w-full sm:w-auto sm:self-start flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white border border-white/30 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all"
               >
                 Find a Tutor <ChevronRight className="w-4 h-4" />
               </a>
