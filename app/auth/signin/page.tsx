@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { signIn, getSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react'
 
 export default function SignIn() {
@@ -32,9 +33,12 @@ export default function SignIn() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-white dark:from-slate-900 dark:to-slate-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-900 dark:text-white">Sign in to your account</h2>
-          <p className="mt-2 text-center text-sm text-slate-600 dark:text-slate-400">Or <Link href="/auth/signup" className="font-medium text-primary-600 hover:text-primary-500">create a new account</Link></p>
+        <div className="text-center">
+          <div className="flex justify-center mb-4">
+            <Image src="/logo.png" alt="Universal Study Hub" width={80} height={80} className="rounded-full object-contain drop-shadow-lg" />
+          </div>
+          <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Sign in to your account</h2>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Or <Link href="/auth/signup" className="font-medium text-primary-600 hover:text-primary-500">create a new account</Link></p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">

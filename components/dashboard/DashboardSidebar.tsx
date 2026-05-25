@@ -2,6 +2,7 @@
 
 import { useSession, signOut } from 'next-auth/react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
   Home,
@@ -68,10 +69,20 @@ export default function DashboardSidebar() {
 
   return (
     <div className="w-64 bg-white dark:bg-slate-800 shadow-sm border-r border-slate-200 dark:border-slate-700">
-      <div className="p-6">
-        <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-          Universal Study Hub
-        </h2>
+      <div className="p-4 border-b border-slate-200 dark:border-slate-700">
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/logo.png"
+            alt="Universal Study Hub"
+            width={40}
+            height={40}
+            className="rounded-full object-contain"
+          />
+          <div className="flex flex-col">
+            <span className="text-sm font-bold text-slate-900 dark:text-white leading-tight">Universal Study Hub</span>
+            <span className="text-[10px] text-slate-500 dark:text-slate-400">Learn Without Limits</span>
+          </div>
+        </Link>
       </div>
 
       <nav className="px-4 pb-4">

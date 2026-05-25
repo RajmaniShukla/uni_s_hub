@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
@@ -23,11 +24,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-              <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
-                Universal Study Hub
-              </span>
-            </h3>
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <Image
+                src="/logo.png"
+                alt="Universal Study Hub"
+                width={48}
+                height={48}
+                className="rounded-full object-contain"
+              />
+              <h3 className="text-xl sm:text-2xl font-bold text-white">
+                <span className="bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                  Universal Study Hub
+                </span>
+              </h3>
+            </div>
             <p className="text-slate-400 mb-4 text-sm sm:text-base">
               Your Global Gateway to Quality Education. Connecting students with verified tutors worldwide.
             </p>
@@ -77,15 +87,25 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                <a href="tel:+1234567890" className="text-slate-400 hover:text-primary-400 transition-colors text-sm sm:text-base">
-                  +1 (234) 567-890
-                </a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919876541177" className="text-slate-400 hover:text-primary-400 transition-colors text-sm sm:text-base">
+                    +91 98765 41177
+                  </a>
+                  <a href="tel:+917428748090" className="text-slate-400 hover:text-primary-400 transition-colors text-sm sm:text-base">
+                    +91 74287 48090
+                  </a>
+                </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-400 text-sm sm:text-base">
-                  Global Online Platform
-                </span>
+                <a
+                  href="https://maps.google.com/?q=SCO+43+Sector+20C+Chandigarh+160020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-primary-400 transition-colors text-sm sm:text-base"
+                >
+                  SCO 43, Sector 20C,<br />Chandigarh – 160020
+                </a>
               </li>
             </ul>
           </div>

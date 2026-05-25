@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, Sun, Moon, GraduationCap } from 'lucide-react'
+import Image from 'next/image'
+import { Menu, X, Sun, Moon } from 'lucide-react'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,9 +38,14 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="#" className="flex items-center gap-2 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${isScrolled ? 'bg-gradient-to-br from-primary-500 to-primary-700' : 'bg-white/10 backdrop-blur-sm border border-white/20'}`}>
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Universal Study Hub"
+              width={44}
+              height={44}
+              className="rounded-full object-contain drop-shadow-md"
+              priority
+            />
             <div className="flex flex-col">
               <span className={`text-lg sm:text-xl font-bold transition-colors ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`}>Universal Study Hub</span>
               <span className={`text-[10px] font-medium -mt-1 hidden sm:block transition-colors ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>Learn Without Limits</span>

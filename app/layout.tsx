@@ -10,17 +10,27 @@ export const metadata: Metadata = {
   description: 'A unified learning platform where students and parents can raise academic queries for any subject and get connected with the best tutors and teachers across all international standards.',
   keywords: ['education', 'tutoring', 'online learning', 'study help', 'academic support', 'international education', 'tutors'],
   authors: [{ name: 'Universal Study Hub' }],
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: 'Universal Study Hub | Your Global Gateway to Quality Education',
     description: 'Ask. Learn. Connect with the Best Tutors Worldwide',
     url: 'https://universalstudyhub.com',
     siteName: 'Universal Study Hub',
     type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Universal Study Hub' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Universal Study Hub',
     description: 'Your Global Gateway to Quality Education',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,

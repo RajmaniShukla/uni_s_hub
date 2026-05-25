@@ -1,6 +1,7 @@
 'use client'
 
-import { Star, Quote } from 'lucide-react'
+import Image from 'next/image'
+import { Star, Quote, Trophy, Award } from 'lucide-react'
 
 export default function Testimonials() {
   const testimonials = [
@@ -132,6 +133,23 @@ export default function Testimonials() {
     </div>
   )
 
+  const topPerformers = [
+    {
+      name: 'Udaiivir Singh Aulakh',
+      grade: 'A*',
+      photo: '/students/udaiivir.png',
+      subject: 'Cambridge IGCSE',
+      description: 'Achieved top grade with consistent dedication and expert mentorship.',
+    },
+    {
+      name: 'Aaryan Gupta',
+      grade: 'A*',
+      photo: '/students/aaryan.png',
+      subject: 'Cambridge IGCSE',
+      description: 'Outstanding performance driven by personalised learning and hard work.',
+    },
+  ]
+
   return (
     <section id="testimonials" className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,6 +160,57 @@ export default function Testimonials() {
           <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300">
             Join thousands of students and parents transforming their academic journey
           </p>
+        </div>
+
+        {/* Top Performers */}
+        <div className="mb-14 sm:mb-20">
+          <div className="flex items-center justify-center gap-3 mb-8 sm:mb-10">
+            <Trophy className="w-7 h-7 text-yellow-500" />
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              Our Best Performers
+            </h3>
+            <Trophy className="w-7 h-7 text-yellow-500" />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-stretch max-w-3xl mx-auto">
+            {topPerformers.map((performer, idx) => (
+              <div
+                key={idx}
+                className="flex-1 relative bg-gradient-to-br from-yellow-50 via-white to-primary-50 dark:from-slate-800 dark:via-slate-800 dark:to-slate-700 rounded-2xl shadow-xl border-2 border-yellow-300 dark:border-yellow-500/40 p-6 flex flex-col items-center text-center group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              >
+                {/* Gold badge */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow flex items-center gap-1">
+                  <Award className="w-3.5 h-3.5" /> Top Result
+                </div>
+
+                {/* Photo */}
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-4 ring-offset-white dark:ring-offset-slate-800 shadow-lg mb-4 mt-3">
+                  <Image
+                    src={performer.photo}
+                    alt={performer.name}
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Grade badge */}
+                <div className="bg-green-600 text-white text-xl font-extrabold px-5 py-1 rounded-lg mb-3 tracking-wide shadow">
+                  {performer.grade}
+                </div>
+
+                <h4 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-1">
+                  {performer.name}
+                </h4>
+                <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-2">
+                  {performer.subject}
+                </p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  {performer.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Students Testimonials */}

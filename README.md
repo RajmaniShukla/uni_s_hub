@@ -262,7 +262,9 @@ This project is licensed under the MIT License.
 ## 📞 Support
 
 For questions or support, please contact:
-- Email: support@universalstudyhub.com
+- Email: info@universalstudyhub.com
+- Phone: +91 98765 41177 / +91 74287 48090
+- Address: SCO 43, Sector 20C, Chandigarh – 160020
 - Website: https://universalstudyhub.com
 
 ---

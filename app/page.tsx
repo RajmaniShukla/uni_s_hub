@@ -10,6 +10,7 @@ import WhyChoose from '@/components/WhyChoose'
 import StudentsParents from '@/components/StudentsParents'
 import CTASection from '@/components/CTASection'
 import Footer from '@/components/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <StudentsParents />
       <CTASection />
       <Footer />
+      <WhatsAppButton />
     </main>
   )
 }
