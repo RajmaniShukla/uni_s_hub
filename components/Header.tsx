@@ -26,11 +26,11 @@ export default function Header() {
   }
 
   const navLinks = [
-    { name: 'About', href: '#about' },
     { name: 'Courses', href: '#courses' },
     { name: 'Teachers', href: '#teachers' },
     { name: 'Success Stories', href: '#testimonials' },
     { name: 'Why Us', href: '#why-choose' },
+    { name: 'About', href: '#about' },
   ]
 
   return (
@@ -47,21 +47,21 @@ export default function Header() {
               priority
             />
             <div className="flex flex-col">
-              <span className={`text-lg sm:text-xl font-bold transition-colors ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`}>Universal Study Hub</span>
-              <span className={`text-[10px] font-medium -mt-1 hidden sm:block transition-colors ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>Learn Without Limits</span>
+              <span className={`text-lg sm:text-xl font-bold transition-colors whitespace-nowrap ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`}>Universal Study Hub</span>
+              <span className={`text-[10px] font-medium -mt-1 hidden sm:block transition-colors whitespace-nowrap ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>Learn Without Limits</span>
             </div>
           </a>
 
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>{link.name}</a>
+              <a key={link.name} href={link.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>{link.name}</a>
             ))}
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
             {mounted && (<button onClick={toggleTheme} className={`p-2.5 rounded-xl transition-all duration-300 ${isScrolled ? 'text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>{isDark ? <Sun size={20} /> : <Moon size={20} />}</button>)}
-            <a href="/auth/signin" className={`px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${isScrolled ? 'text-slate-700 dark:text-slate-300 hover:text-primary-600 hover:bg-slate-100 dark:hover:bg-slate-800' : 'text-white hover:bg-white/10'}`}>Sign In</a>
-            <a href="/auth/signup" className={`px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${isScrolled ? 'bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white shadow-lg shadow-primary-500/20' : 'bg-white text-primary-700 hover:bg-white/90 shadow-lg'}`}>Get Started Free</a>
+            <a href="/auth/signin" className={`px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 whitespace-nowrap ${isScrolled ? 'text-slate-700 dark:text-slate-300 hover:text-primary-600 hover:bg-slate-100 dark:hover:bg-slate-800' : 'text-white hover:bg-white/10'}`}>Sign In</a>
+            <a href="/auth/signup" className={`px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 whitespace-nowrap ${isScrolled ? 'bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white shadow-lg shadow-primary-500/20' : 'bg-white text-primary-700 hover:bg-white/90 shadow-lg'}`}>Get Started Free</a>
           </div>
 
           <div className="flex lg:hidden items-center gap-2">
