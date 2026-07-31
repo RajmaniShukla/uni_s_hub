@@ -10,7 +10,7 @@ export default function Testimonials() {
       type: 'student',
       name: 'Aisha Patel',
       role: 'Grade 11 Student',
-      course: 'Mathematics - JEE Preparation',
+      course: 'Mathematics - IGCSE',
       content:
         'The personalised approach from Dr. Sarah Johnson completely changed how I understand math. My score improved from 65% to 92% in just 3 months!',
       rating: 5,

@@ -27,17 +27,7 @@ const curricula = [
     icon: '🌍',
     subjects: ['Mathematics HL/SL', 'Physics', 'Chemistry', 'Economics', 'TOK'],
   },
-  {
-    id: 'cbse',
-    label: 'CBSE',
-    fullName: 'CBSE Board',
-    description: 'Grades 6–12 · India',
-    color: 'from-orange-500 to-orange-700',
-    border: 'border-orange-400/40',
-    glow: 'shadow-orange-500/30',
-    icon: '📚',
-    subjects: ['Science', 'Maths', 'Social Studies', 'English', 'Hindi'],
-  },
+
   {
     id: 'sat',
     label: 'SAT / ACT',
@@ -60,17 +50,7 @@ const curricula = [
     icon: '📖',
     subjects: ['Mathematics', 'Science', 'English Literature', 'History', 'Commerce'],
   },
-  {
-    id: 'jee',
-    label: 'JEE / NEET',
-    fullName: 'JEE & NEET Prep',
-    description: 'Engineering & Medical',
-    color: 'from-red-500 to-red-700',
-    border: 'border-red-400/40',
-    glow: 'shadow-red-500/30',
-    icon: '⚗️',
-    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'Problem Solving'],
-  },
+
 ]
 
 const stats = [
@@ -119,7 +99,7 @@ export default function Hero() {
               <span className="gradient-text-animated">Every Curriculum</span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
-              From IGCSE to IB, CBSE to SAT — connect with verified tutors and achieve the grades you deserve.
+              From IGCSE to IB, ICSE to SAT — connect with verified tutors and achieve the grades you deserve.
             </p>
           </div>
 

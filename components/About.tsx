@@ -3,11 +3,8 @@ import { Globe, BookOpen, Users, Target, Award, Zap } from 'lucide-react'
 const boards = [
   { label: 'IGCSE', color: 'bg-blue-600', desc: 'Cambridge' },
   { label: 'IB', color: 'bg-purple-600', desc: 'International Baccalaureate' },
-  { label: 'CBSE', color: 'bg-orange-600', desc: 'India National Board' },
   { label: 'ICSE', color: 'bg-pink-600', desc: 'India National Board' },
   { label: 'SAT', color: 'bg-green-600', desc: 'US College Entrance' },
-  { label: 'JEE', color: 'bg-red-600', desc: 'Engineering Entrance' },
-  { label: 'NEET', color: 'bg-teal-600', desc: 'Medical Entrance' },
   { label: 'A-Levels', color: 'bg-indigo-600', desc: 'Cambridge Advanced' },
 ]
 
@@ -15,7 +12,7 @@ const features = [
   {
     icon: BookOpen,
     title: 'All Boards Covered',
-    description: 'From IGCSE and IB to CBSE, ICSE, SAT, JEE and NEET — one platform for every curriculum.',
+    description: 'From IGCSE and IB to ICSE, SAT and A-Levels — one platform for every curriculum.'
   },
   {
     icon: Globe,
@@ -30,7 +27,7 @@ const features = [
   {
     icon: Target,
     title: 'Result-Oriented',
-    description: 'Proven track record — our students achieve A* in IGCSE, 7s in IB, and top ranks in JEE/NEET.',
+    description: 'Proven track record — our students achieve A* in IGCSE, 7s in IB, and top SAT scores every year.'
   },
   {
     icon: Award,
@@ -55,9 +52,9 @@ export default function About() {
             About <span className="gradient-text">Universal Study Hub</span>
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-            Universal Study Hub is Chandigarh's leading online tutoring platform — connecting students
-            with India's best tutors across every major curriculum. Whether you're aiming for an A* in
-            IGCSE, a 7 in IB, a top score in JEE/NEET, or a perfect SAT — we have the right tutor for you.
+            Universal Study Hub is Chandigarh’s leading online tutoring platform — connecting students
+            with India’s best tutors across every major curriculum. Whether you’re aiming for an A* in
+            IGCSE, a 7 in IB, a top score in SAT, or an A in A-Levels — we have the right tutor for you.
           </p>
         </div>
 
@@ -104,7 +101,7 @@ export default function About() {
 
         {/* Address strip */}
         <div className="mt-10 text-center text-slate-500 dark:text-slate-400 text-sm">
-          📍 SCO 43, Sector 20C, Chandigarh – 160020 &nbsp;|&nbsp; 📞 +91 98765 41177
+          📍 SCO 43, Sector 20C, Chandigarh - 160020 &nbsp;|&nbsp; 📞 +91 98765 41177
         </div>
       </div>
     </section>

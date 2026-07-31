@@ -64,7 +64,7 @@ export default function AdPopup() {
         <div className="px-6 py-5">
           {/* Boards strip */}
           <div className="flex flex-wrap justify-center gap-2 mb-4">
-            {['IGCSE', 'IB', 'CBSE', 'ICSE', 'SAT', 'JEE', 'NEET'].map((b) => (
+            {['IGCSE', 'IB', 'ICSE', 'SAT', 'A-Levels'].map((b) => (
               <span
                 key={b}
                 className="bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-xs font-bold px-3 py-1 rounded-full border border-primary-200 dark:border-primary-700"
@@ -78,7 +78,7 @@ export default function AdPopup() {
           <ul className="space-y-2 mb-5 text-sm text-slate-700 dark:text-slate-300">
             {[
               '✅ 1-on-1 sessions with board-specialist tutors',
-              '✅ A* results in IGCSE · 7s in IB · Top ranks in JEE/NEET',
+              '✅ A* results in IGCSE · 7s in IB · Top SAT & A-Level scores',
               '✅ Flexible scheduling — morning, evening & weekends',
               '✅ SCO 43, Sector 20C, Chandigarh — 160020',
             ].map((pt) => (

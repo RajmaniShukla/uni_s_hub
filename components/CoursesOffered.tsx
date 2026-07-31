@@ -44,26 +44,7 @@ const curricula = [
       { name: 'TOK / EE', students: 430 },
     ],
   },
-  {
-    id: 'cbse',
-    label: 'CBSE',
-    fullName: 'CBSE Board',
-    color: 'from-orange-500 to-orange-700',
-    lightBg: 'bg-orange-50 dark:bg-orange-900/20',
-    border: 'border-orange-200 dark:border-orange-700',
-    badge: 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300',
-    icon: '📚',
-    level: 'Grades 6–12',
-    students: 4800,
-    subjects: [
-      { name: 'Mathematics', students: 1800 },
-      { name: 'Science (PCB/PCM)', students: 1650 },
-      { name: 'English', students: 1200 },
-      { name: 'Social Studies', students: 780 },
-      { name: 'Hindi', students: 620 },
-      { name: 'Accountancy', students: 540 },
-    ],
-  },
+
   {
     id: 'icse',
     label: 'ICSE',
@@ -104,26 +85,7 @@ const curricula = [
       { name: 'Essay Writing', students: 250 },
     ],
   },
-  {
-    id: 'jee',
-    label: 'JEE / NEET',
-    fullName: 'JEE & NEET Preparation',
-    color: 'from-red-600 to-red-800',
-    lightBg: 'bg-red-50 dark:bg-red-900/20',
-    border: 'border-red-200 dark:border-red-700',
-    badge: 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
-    icon: '⚗️',
-    level: 'Engineering & Medical',
-    students: 3900,
-    subjects: [
-      { name: 'Physics (JEE)', students: 1200 },
-      { name: 'Chemistry (JEE/NEET)', students: 1100 },
-      { name: 'Mathematics (JEE)', students: 980 },
-      { name: 'Biology (NEET)', students: 920 },
-      { name: 'Problem Solving', students: 650 },
-      { name: 'Mock Tests', students: 780 },
-    ],
-  },
+
 ]
 
 export default function CoursesOffered() {
@@ -215,7 +177,7 @@ export default function CoursesOffered() {
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {[
-            { val: '6+', label: 'Boards Covered' },
+            { val: '5+', label: 'Boards Covered' },
             { val: '50K+', label: 'Students Learning' },
             { val: '500+', label: 'Expert Tutors' },
             { val: '4.9/5', label: 'Average Rating' },

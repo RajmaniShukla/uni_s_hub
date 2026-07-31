@@ -7,7 +7,7 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Courses | Universal Study Hub',
-  description: 'Explore all courses offered at Universal Study Hub — IGCSE, IB, CBSE, ICSE, SAT, JEE, NEET and more. Find the right curriculum for you.',
+  description: 'Explore all courses offered at Universal Study Hub — IGCSE, IB, ICSE, SAT/ACT, and A-Levels. Find the right curriculum for you.',
 }
 
 export default function CoursesPage() {

@@ -5,7 +5,7 @@ const steps = [
     number: '01',
     icon: MessageSquare,
     title: 'Choose Your Board',
-    description: 'Select your curriculum — IGCSE, IB, CBSE, SAT, JEE, NEET or any other. Tell us your subject and target grade.',
+    description: 'Select your curriculum — IGCSE, IB, ICSE, SAT or A-Levels. Tell us your subject and target grade.',
     color: 'from-blue-500 to-blue-700',
   },
   {
@@ -26,7 +26,7 @@ const steps = [
     number: '04',
     icon: Trophy,
     title: 'Achieve Your Grade',
-    description: 'Track your progress, see results, and walk into your exam confident. A* in IGCSE, 7 in IB, top rank in JEE — it starts here.',
+    description: 'Track your progress, see results, and walk into your exam confident. A* in IGCSE, 7 in IB, top SAT score — it starts here.',
     color: 'from-green-500 to-green-700',
   },
 ]

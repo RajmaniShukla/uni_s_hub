@@ -23,17 +23,7 @@ const boards = [
     body: 'International Baccalaureate',
     highlight: 'Top scorers in HL subjects',
   },
-  {
-    label: 'CBSE',
-    short: 'CBSE',
-    color: 'from-orange-500 to-orange-700',
-    border: 'border-orange-300 dark:border-orange-600',
-    tag: 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300',
-    icon: '📚',
-    grades: 'Grades 6–12',
-    body: 'Central Board of Secondary Education',
-    highlight: '95%+ results consistently',
-  },
+
   {
     label: 'ICSE / ISC',
     short: 'ICSE',
@@ -56,28 +46,7 @@ const boards = [
     body: 'College Board / ACT Inc.',
     highlight: '1500+ SAT scores achieved',
   },
-  {
-    label: 'JEE Main & Advanced',
-    short: 'JEE',
-    color: 'from-red-500 to-red-700',
-    border: 'border-red-300 dark:border-red-600',
-    tag: 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-300',
-    icon: '⚙️',
-    grades: 'Engineering Entrance',
-    body: 'National Testing Agency',
-    highlight: 'IIT / NIT selections every year',
-  },
-  {
-    label: 'NEET',
-    short: 'NEET',
-    color: 'from-teal-500 to-teal-700',
-    border: 'border-teal-300 dark:border-teal-600',
-    tag: 'bg-teal-100 text-teal-700 dark:bg-teal-900/50 dark:text-teal-300',
-    icon: '⚗️',
-    grades: 'Medical Entrance',
-    body: 'National Testing Agency',
-    highlight: 'MBBS selections pan-India',
-  },
+
   {
     label: 'Cambridge A-Levels',
     short: 'A-Level',

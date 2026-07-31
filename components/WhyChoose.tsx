@@ -4,14 +4,14 @@ const reasons = [
   {
     icon: UserCheck,
     title: 'Board-Specialist Tutors',
-    description: 'Every tutor is matched to your exact board — IGCSE, IB, CBSE, SAT, JEE or NEET. No generalists.',
+    description: 'Every tutor is matched to your exact board — IGCSE, IB, ICSE, SAT or A-Levels. No generalists.',
     highlight: 'Right tutor. Right board.',
   },
   {
     icon: Trophy,
     title: 'Proven Results',
-    description: 'Our students consistently achieve A* in IGCSE, 7s in IB, and top ranks in JEE/NEET every year.',
-    highlight: 'A* · 7s · Top Ranks',
+    description: 'Our students consistently achieve A* in IGCSE, 7s in IB, and top scores in SAT & A-Levels every year.',
+    highlight: 'A* · 7s · Top Scores',
   },
   {
     icon: Target,
@@ -21,8 +21,8 @@ const reasons = [
   },
   {
     icon: Globe,
-    title: '8 Curricula Covered',
-    description: 'IGCSE · IB · CBSE · ICSE · SAT · ACT · JEE · NEET — all on one platform.',
+    title: '5 Curricula Covered',
+    description: 'IGCSE · IB · ICSE · SAT / ACT · A-Levels — all on one platform.',
     highlight: 'Every board. One hub.',
   },
   {
