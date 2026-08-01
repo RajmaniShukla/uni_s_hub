@@ -85,6 +85,55 @@ const curricula = [
       { name: 'Essay Writing', students: 250 },
     ],
   },
+  {
+    id: 'ap',
+    label: 'AP',
+    fullName: 'Advanced Placement (AP)',
+    color: 'from-orange-500 to-orange-700',
+    lightBg: 'bg-orange-50 dark:bg-orange-900/20',
+    border: 'border-orange-200 dark:border-orange-700',
+    badge: 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300',
+    icon: '🏛️',
+    level: 'College-Level · Grades 11–12',
+    students: 1850,
+    subjects: [
+      // Math & Computer Science
+      { name: 'AP Calculus AB', students: 740 },
+      { name: 'AP Calculus BC', students: 520 },
+      { name: 'AP Statistics', students: 450 },
+      { name: 'AP Precalculus', students: 380 },
+      { name: 'AP Computer Science A', students: 490 },
+      { name: 'AP Computer Science Principles', students: 360 },
+      // Sciences
+      { name: 'AP Biology', students: 620 },
+      { name: 'AP Chemistry', students: 580 },
+      { name: 'AP Physics 1: Algebra-Based', students: 640 },
+      { name: 'AP Physics 2: Algebra-Based', students: 420 },
+      { name: 'AP Physics C: Mechanics', students: 310 },
+      { name: 'AP Physics C: E&M', students: 270 },
+      { name: 'AP Environmental Science', students: 340 },
+      // English
+      { name: 'AP English Language & Comp', students: 530 },
+      { name: 'AP English Literature & Comp', students: 480 },
+      // History & Social Sciences
+      { name: 'AP US History', students: 410 },
+      { name: 'AP World History: Modern', students: 370 },
+      { name: 'AP Psychology', students: 390 },
+      { name: 'AP Macroeconomics', students: 320 },
+      { name: 'AP Microeconomics', students: 290 },
+      { name: 'AP US Government & Politics', students: 260 },
+      { name: 'AP Human Geography', students: 280 },
+      // Languages
+      { name: 'AP Spanish Language & Culture', students: 300 },
+      { name: 'AP French Language & Culture', students: 220 },
+      // Arts
+      { name: 'AP Art History', students: 190 },
+      { name: 'AP Music Theory', students: 160 },
+      // Capstone
+      { name: 'AP Seminar', students: 140 },
+      { name: 'AP Research', students: 110 },
+    ],
+  },
 
 ]
 
@@ -177,7 +226,7 @@ export default function CoursesOffered() {
         {/* Stats row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {[
-            { val: '5+', label: 'Boards Covered' },
+            { val: '6+', label: 'Boards Covered' },
             { val: '50K+', label: 'Students Learning' },
             { val: '500+', label: 'Expert Tutors' },
             { val: '4.9/5', label: 'Average Rating' },

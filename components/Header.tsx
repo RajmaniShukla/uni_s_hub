@@ -42,7 +42,7 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-lg' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
             <Image
               src="/logo.png"
               alt="Universal Study Hub"
@@ -51,18 +51,18 @@ export default function Header() {
               className="rounded-full object-contain drop-shadow-md"
               priority
             />
-            <div className="flex flex-col">
-              <span className={`text-lg sm:text-xl font-bold transition-colors whitespace-nowrap ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`}>Universal Study Hub</span>
-              <span className={`text-[10px] font-medium -mt-1 hidden sm:block transition-colors whitespace-nowrap ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>Learn Without Limits</span>
+            <div className="flex flex-col hidden sm:flex">
+              <span className={`text-base lg:text-xl font-bold transition-colors whitespace-nowrap ${isScrolled ? 'text-primary-600 dark:text-primary-400' : 'text-white'}`}>Universal Study Hub</span>
+              <span className={`text-[10px] font-medium -mt-1 hidden xl:block transition-colors whitespace-nowrap ${isScrolled ? 'text-slate-500' : 'text-white/60'}`}>Learn Without Limits</span>
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap
                   ${isActive(link.href)
                     ? isScrolled
                       ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20 font-semibold'
@@ -77,7 +77,7 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             {mounted && (
               <button
                 onClick={toggleTheme}
@@ -100,7 +100,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="flex lg:hidden items-center gap-2">
+          <div className="flex xl:hidden items-center gap-2">
             {mounted && (
               <button
                 onClick={toggleTheme}
@@ -119,7 +119,7 @@ export default function Header() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-4 animate-fade-in-up">
+          <div className="xl:hidden pb-4 animate-fade-in-up">
             <div className="bg-white dark:bg-slate-800 shadow-2xl rounded-2xl p-4 border border-slate-200 dark:border-slate-700">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (

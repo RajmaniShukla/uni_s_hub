@@ -58,6 +58,17 @@ const boards = [
     body: 'Cambridge Assessment',
     highlight: 'A & A* results for UK universities',
   },
+  {
+    label: 'Advanced Placement',
+    short: 'AP',
+    color: 'from-orange-500 to-orange-700',
+    border: 'border-orange-300 dark:border-orange-600',
+    tag: 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300',
+    icon: '🏛️',
+    grades: 'Grades 11–12',
+    body: 'College Board (USA)',
+    highlight: 'College credit while in high school',
+  },
 ]
 
 const subjects = [
@@ -93,7 +104,7 @@ export default function SubjectsStandards() {
           <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">
             Curriculums & Exam Boards
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-5xl mx-auto">
             {boards.map((b, i) => (
               <div
                 key={i}
